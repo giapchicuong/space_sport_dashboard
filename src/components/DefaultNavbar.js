@@ -17,7 +17,7 @@ export default function DefaultNavbar({ title, linkTo, icon, isActive, iconChild
                             icon
                         }
                         <div>
-                            <p className='text-lg font-normal text-center'>{title}</p>
+                            <p className='text-base font-normal text-center'>{title}</p>
                         </div>
 
                         <RiArrowDropDownLine className='text-3xl' />

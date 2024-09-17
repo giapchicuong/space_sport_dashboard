@@ -8,6 +8,7 @@ import { FaChartLine } from "react-icons/fa";
 import { RxCountdownTimer } from "react-icons/rx";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import AreaChart from "../components/AreaChart";
+import DefaultTable from "../components/DefaultTable";
 
 export default function App() {
 
@@ -18,11 +19,11 @@ export default function App() {
 
       <SideBar />
 
-      <article className="w-full h-full flex flex-col flex-grow-0 overflow-y-auto hide_scroll">
+      <article className="w-full h-full flex flex-col flex-grow-0 hide_scroll ">
 
         <Header />
 
-        <div className="w-full h-screen p-5 bg-primaryBg">
+        <div className="w-full h-full p-5  bg-primaryBg overflow-y-auto hide-scroll ">
 
           {
             pathname === '/' ? <DashboardPage /> : <Outlet />
@@ -39,9 +40,9 @@ export default function App() {
 
 export function DashboardPage() {
   return (
-    <main className='w-full h-full flex flex-col gap-5 flex-grow-0 overflow-y-auto'>
+    <main className='w-full h-full flex flex-col gap-5 flex-grow-0'>
 
-      <h1 className="text-[32px] font-bold">Dashboard</h1>
+      <h1 className="text-[32px] font-semibold">Dashboard</h1>
 
       <div className="grid grid-cols-4 gap-10">
 
@@ -156,7 +157,7 @@ export function DashboardPage() {
         </div>
       </div>
 
-      <div className="w-full p-3 flex flex-col aspect-video bg-white rounded-[14px] shadow-sm">
+      <div className="w-full p-3 flex flex-col gap-5 aspect-video bg-white rounded-[14px] shadow-sm">
 
         <div className="flex items-center justify-between">
 
@@ -170,10 +171,27 @@ export function DashboardPage() {
           </div>
         </div>
 
-        <div className="">
 
-          <AreaChart />
+        <AreaChart />
+      </div>
+
+
+      <div className="w-full p-3 flex flex-col gap-5 aspect-video bg-white rounded-[14px] shadow-sm">
+
+        <div className="flex items-center justify-between">
+
+          <p className="text-2xl font-bold">Deal Details</p>
+
+          <div className="flex items-center justify-between rounded border-stroke bg-inputPlaceholder border px-1 ">
+
+            <div className="text-xs font-semibold text-stroke">October</div>
+
+            <RiArrowDropDownLine className="text-3xl font-semibold text-stroke" />
+          </div>
         </div>
+
+
+        <DefaultTable />
       </div>
     </main>
   );

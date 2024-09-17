@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import DefaultSearch from './DefaultSearch'
 import CircleImage from './CircleImage'
 import { IoIosArrowDropdown } from 'react-icons/io'
