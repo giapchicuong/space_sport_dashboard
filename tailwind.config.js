@@ -20,8 +20,14 @@ module.exports = {
         uptrend: '#00B69B',
         downtrend: '#F93C65',
         uptrendText: '#606060',
-        bgBorder: '#D5D5D5'
-
+        bgBorder: '#D5D5D5',
+        bgComplete: '#d4f7f1',
+        textComplete: '#00B69B',
+        bgProcess: '#cbb5ff',
+        textProcess: '#6226EF',
+        bgReject: '#ffcfca',
+        textReject: '#EF3826',
+        bgBlur: 'rgba(15, 15, 15, 0.90)',
       },
 
     },

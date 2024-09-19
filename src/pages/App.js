@@ -9,6 +9,11 @@ import { RxCountdownTimer } from "react-icons/rx";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import AreaChart from "../components/AreaChart";
 import DefaultTable from "../components/DefaultTable";
+import SecondTable from "../components/SecondTable";
+import DefaultPopup from "../components/DefaultPopup";
+import DefaultInput from "../components/DefaultInput";
+import { IoMdClose } from "react-icons/io";
+import DefaultButton from "../components/DefaultButton";
 
 export default function App() {
 
@@ -192,9 +197,43 @@ export function DashboardPage() {
 
 
         <DefaultTable />
+        {/* <SecondTable /> */}
+
+        {/* <DefaultPopup>
+
+          <h1 className="text-2xl font-bold">Add New Product</h1>
+
+
+          <button className="absolute right-5 bg-inputPlaceholder p-2.5 rounded-full">
+            <IoMdClose className="text-xl" />
+          </button>
+
+
+          <DefaultInput
+            type='text'
+            id='product'
+            name='product'
+            title='Product:'
+            placeholder='Enter your product'
+          />
+
+          <DefaultInput
+            type='text'
+            id='product'
+            name='product'
+            title='Product:'
+            placeholder='Enter your product'
+          />
+
+          <DefaultButton
+            title='Add now'
+          />
+
+        </DefaultPopup> */}
       </div>
 
       <div className="py-2.5"></div>
     </main>
   );
 }
+

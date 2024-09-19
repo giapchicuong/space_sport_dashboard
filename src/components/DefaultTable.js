@@ -20,7 +20,7 @@ export default function DefaultTable() {
                     <td className='p-5 text-base font-normal text-start whitespace-nowrap'>12.09.2024 - 12h32 PM</td>
                     <td className='p-5 text-base font-normal text-start whitespace-nowrap'>420</td>
                     <td className='p-5 text-base font-normal text-start whitespace-nowrap'>34.295.000 VNĐ</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'><p className='bg-uptrend text-white rounded-full w-fit px-2.5 py-1'>Delivered</p></td>
+                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'><p className='bg-bgComplete text-textComplete font-bold rounded-full w-fit px-2.5 py-1'>Delivered</p></td>
                 </tr>
 
 
@@ -30,7 +30,7 @@ export default function DefaultTable() {
                     <td className='p-5 text-base font-normal text-start whitespace-nowrap'>12.09.2024 - 12h32 PM</td>
                     <td className='p-5 text-base font-normal text-start whitespace-nowrap'>420</td>
                     <td className='p-5 text-base font-normal text-start whitespace-nowrap'>34.295.000 VNĐ</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'><p className='bg-uptrend text-white rounded-full w-fit px-2.5 py-1'>Delivered</p></td>
+                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'><p className='bg-bgReject text-textReject font-bold rounded-full w-fit px-2.5 py-1'>Rejected</p></td>
                 </tr>
 
 
@@ -40,7 +40,7 @@ export default function DefaultTable() {
                     <td className='p-5 text-base font-normal text-start whitespace-nowrap'>12.09.2024 - 12h32 PM</td>
                     <td className='p-5 text-base font-normal text-start whitespace-nowrap'>420</td>
                     <td className='p-5 text-base font-normal text-start whitespace-nowrap'>34.295.000 VNĐ</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'><p className='bg-uptrend text-white rounded-full w-fit px-2.5 py-1'>Delivered</p></td>
+                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'><p className='bg-bgProcess text-textProcess font-bold rounded-full w-fit px-2.5 py-1'>Processing</p></td>
                 </tr>
 
 
@@ -50,7 +50,7 @@ export default function DefaultTable() {
                     <td className='p-5 text-base font-normal text-start whitespace-nowrap'>12.09.2024 - 12h32 PM</td>
                     <td className='p-5 text-base font-normal text-start whitespace-nowrap'>420</td>
                     <td className='p-5 text-base font-normal text-start whitespace-nowrap'>34.295.000 VNĐ</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'><p className='bg-uptrend text-white rounded-full w-fit px-2.5 py-1'>Delivered</p></td>
+                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'><p className='bg-bgComplete text-textComplete font-bold rounded-full w-fit px-2.5 py-1'>Delivered</p></td>
                 </tr>
 
 
@@ -60,7 +60,7 @@ export default function DefaultTable() {
                     <td className='p-5 text-base font-normal text-start whitespace-nowrap'>12.09.2024 - 12h32 PM</td>
                     <td className='p-5 text-base font-normal text-start whitespace-nowrap'>420</td>
                     <td className='p-5 text-base font-normal text-start whitespace-nowrap'>34.295.000 VNĐ</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'><p className='bg-uptrend text-white rounded-full w-fit px-2.5 py-1'>Delivered</p></td>
+                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'><p className='bg-bgComplete text-textComplete font-bold rounded-full w-fit px-2.5 py-1'>Delivered</p></td>
                 </tr>
             </tbody>
         </table>
