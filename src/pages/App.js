@@ -23,7 +23,7 @@ export default function App() {
 
         <Header />
 
-        <div className="w-full h-full p-5  bg-primaryBg overflow-y-auto hide-scroll ">
+        <div className="w-full h-full p-5 bg-primaryBg overflow-y-auto hide-scroll">
 
           {
             pathname === '/' ? <DashboardPage /> : <Outlet />
@@ -40,7 +40,7 @@ export default function App() {
 
 export function DashboardPage() {
   return (
-    <main className='w-full h-full flex flex-col gap-5 flex-grow-0'>
+    <main className='w-full h-full flex flex-col gap-5'>
 
       <h1 className="text-[32px] font-semibold">Dashboard</h1>
 
@@ -193,6 +193,8 @@ export function DashboardPage() {
 
         <DefaultTable />
       </div>
+
+      <div className="py-2.5"></div>
     </main>
   );
 }
