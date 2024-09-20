@@ -5,7 +5,6 @@
 
 * {
     font-family: 'Roboto', sans-serif;
-    color: #202224;
 }
 
    
@@ -22,3 +21,14 @@ body {
 input {
     outline: none;
  }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scroll::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+.hide-scroll {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
