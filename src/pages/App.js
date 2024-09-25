@@ -9,11 +9,7 @@ import { RxCountdownTimer } from "react-icons/rx";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import AreaChart from "../components/AreaChart";
 import DefaultTable from "../components/DefaultTable";
-import SecondTable from "../components/SecondTable";
-import DefaultPopup from "../components/DefaultPopup";
-import DefaultInput from "../components/DefaultInput";
-import { IoMdClose } from "react-icons/io";
-import DefaultButton from "../components/DefaultButton";
+import ButtonCalendar from "../components/ButtonCalendar";
 
 export default function App() {
 
@@ -31,7 +27,7 @@ export default function App() {
         <div className="w-full h-full p-5 bg-primaryBg overflow-y-auto hide-scroll">
 
           {
-            pathname === '/' ? <DashboardPage /> : <Outlet />
+            pathname === '/admin' ? <DashboardPage /> : <Outlet />
           }
         </div>
       </article>
@@ -45,9 +41,9 @@ export default function App() {
 
 export function DashboardPage() {
   return (
-    <main className='w-full h-full flex flex-col gap-5'>
+    <main className='w-full h-fit flex flex-col gap-5'>
 
-      <h1 className="text-[32px] font-semibold">Dashboard</h1>
+      <h1 className="text-[32px] font-semibold">Tổng quan</h1>
 
       <div className="grid grid-cols-4 gap-10">
 
@@ -57,7 +53,7 @@ export function DashboardPage() {
 
             <div className="flex flex-col gap-2">
 
-              <p className="text-base font-normal text-stroke">Total User</p>
+              <p className="text-base font-normal text-stroke">Tổng người mua hàng</p>
 
               <p className="text-[28px] font-bold">10.000</p>
             </div>
@@ -84,7 +80,7 @@ export function DashboardPage() {
 
             <div className="flex flex-col gap-2">
 
-              <p className="text-base font-normal text-stroke">Total Order</p>
+              <p className="text-base font-normal text-stroke">Tổng đơn hàng</p>
 
               <p className="text-[28px] font-bold">50.000</p>
             </div>
@@ -112,7 +108,7 @@ export function DashboardPage() {
 
             <div className="flex flex-col gap-2">
 
-              <p className="text-base font-normal text-stroke">Total Sales</p>
+              <p className="text-base font-normal text-stroke">Tổng doanh thu</p>
 
               <p className="text-[28px] font-bold">3.000</p>
             </div>
@@ -140,9 +136,9 @@ export function DashboardPage() {
 
             <div className="flex flex-col gap-2">
 
-              <p className="text-base font-normal text-stroke">Total Pending</p>
+              <p className="text-base font-normal text-stroke">Tổng đơn hàng đang nợ</p>
 
-              <p className="text-[28px] font-bold">5.000</p>
+              <p className="text-[28px] font-bold">0</p>
             </div>
 
             <div className="flex justify-center items-center w-[60px] rounded-3xl bg-iconDashboard4 opacity-60 aspect-square">
@@ -162,18 +158,14 @@ export function DashboardPage() {
         </div>
       </div>
 
-      <div className="w-full p-3 flex flex-col gap-5 aspect-video bg-white rounded-[14px] shadow-sm">
+      <div className="w-full p-3 flex flex-col gap-5 bg-white rounded-[14px] shadow-sm">
 
         <div className="flex items-center justify-between">
 
-          <p className="text-2xl font-bold">Sales Details</p>
+          <p className="text-2xl font-bold">Chi tiết doanh thu</p>
 
-          <div className="flex items-center justify-between rounded border-stroke bg-inputPlaceholder border px-1 ">
+          <ButtonCalendar />
 
-            <div className="text-xs font-semibold text-stroke">October</div>
-
-            <RiArrowDropDownLine className="text-3xl font-semibold text-stroke" />
-          </div>
         </div>
 
 
@@ -181,58 +173,21 @@ export function DashboardPage() {
       </div>
 
 
-      <div className="w-full p-3 flex flex-col gap-5 aspect-video bg-white rounded-[14px] shadow-sm">
+      <div className="w-full h-auto p-3 flex flex-col gap-5 bg-white rounded-[14px] shadow-sm">
 
         <div className="flex items-center justify-between">
 
-          <p className="text-2xl font-bold">Deal Details</p>
+          <p className="text-2xl font-bold">Chi tiết hóa đơn</p>
 
-          <div className="flex items-center justify-between rounded border-stroke bg-inputPlaceholder border px-1 ">
-
-            <div className="text-xs font-semibold text-stroke">October</div>
-
-            <RiArrowDropDownLine className="text-3xl font-semibold text-stroke" />
-          </div>
+          <ButtonCalendar />
         </div>
 
-
         <DefaultTable />
-        {/* <SecondTable /> */}
 
-        {/* <DefaultPopup>
-
-          <h1 className="text-2xl font-bold">Add New Product</h1>
-
-
-          <button className="absolute right-5 bg-inputPlaceholder p-2.5 rounded-full">
-            <IoMdClose className="text-xl" />
-          </button>
-
-
-          <DefaultInput
-            type='text'
-            id='product'
-            name='product'
-            title='Product:'
-            placeholder='Enter your product'
-          />
-
-          <DefaultInput
-            type='text'
-            id='product'
-            name='product'
-            title='Product:'
-            placeholder='Enter your product'
-          />
-
-          <DefaultButton
-            title='Add now'
-          />
-
-        </DefaultPopup> */}
       </div>
 
       <div className="py-2.5"></div>
+
     </main>
   );
 }

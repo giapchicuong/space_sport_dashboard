@@ -2,65 +2,34 @@ import React from 'react';
 
 export default function DefaultTable() {
     return (
-        <table class="table-auto w-full h-full text-textColor">
+        <table class="table-auto w-full h-fit text-textColor">
             <thead className='bg-inputPlaceholder'>
                 <tr>
-                    <th className='p-5 text-base font-bold text-start whitespace-nowrap rounded-l-xl'>Product Name</th>
-                    <th className='p-5 text-base font-bold text-start whitespace-nowrap'>Location</th>
-                    <th className='p-5 text-base font-bold text-start whitespace-nowrap'>Date- Time</th>
-                    <th className='p-5 text-base font-bold text-start whitespace-nowrap'>Piece</th>
-                    <th className='p-5 text-base font-bold text-start whitespace-nowrap'>Amount</th>
-                    <th className='p-5 text-base font-bold text-start whitespace-nowrap rounded-r-xl'>Status</th>
+                    <th className='p-5 text-base font-bold text-start whitespace-nowrap rounded-l-xl'>Tên sản phẩm</th>
+                    <th className='p-5 text-base font-bold text-start whitespace-nowrap'>Nhân viên bán</th>
+                    <th className='p-5 text-base font-bold text-start whitespace-nowrap'>Phương thức thanh toán</th>
+                    <th className='p-5 text-base font-bold text-start whitespace-nowrap'>Tổng tiền</th>
+                    <th className='p-5 text-base font-bold text-start whitespace-nowrap'>Ngày bán</th>
+                    <th className='p-5 text-base font-bold text-start whitespace-nowrap rounded-r-xl'>Trạng thái</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>Apple Watch</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>TP HCM</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>12.09.2024 - 12h32 PM</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>420</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>34.295.000 VNĐ</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'><p className='bg-bgComplete text-textComplete font-bold rounded-full w-fit px-2.5 py-1'>Delivered</p></td>
+                <tr className='border-b'>
+                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>Nước mía</td>
+                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>Giap Chi Cuong</td>
+                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>Tiền mặt</td>
+                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>45.000</td>
+                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>15:30 26/09/2024</td>
+                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'><p className='bg-bgComplete text-textComplete font-bold rounded-full w-fit px-2.5 py-1'>Đã thanh toán</p></td>
                 </tr>
 
-
-                <tr>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>Apple Watch</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>TP HCM</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>12.09.2024 - 12h32 PM</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>420</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>34.295.000 VNĐ</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'><p className='bg-bgReject text-textReject font-bold rounded-full w-fit px-2.5 py-1'>Rejected</p></td>
-                </tr>
-
-
-                <tr>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>Apple Watch</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>TP HCM</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>12.09.2024 - 12h32 PM</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>420</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>34.295.000 VNĐ</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'><p className='bg-bgProcess text-textProcess font-bold rounded-full w-fit px-2.5 py-1'>Processing</p></td>
-                </tr>
-
-
-                <tr>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>Apple Watch</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>TP HCM</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>12.09.2024 - 12h32 PM</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>420</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>34.295.000 VNĐ</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'><p className='bg-bgComplete text-textComplete font-bold rounded-full w-fit px-2.5 py-1'>Delivered</p></td>
-                </tr>
-
-
-                <tr>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>Apple Watch</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>TP HCM</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>12.09.2024 - 12h32 PM</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>420</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>34.295.000 VNĐ</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'><p className='bg-bgComplete text-textComplete font-bold rounded-full w-fit px-2.5 py-1'>Delivered</p></td>
+                <tr className='border-b'>
+                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>Nước mía</td>
+                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>Giap Chi Cuong</td>
+                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>Tiền mặt</td>
+                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>45.000</td>
+                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>15:30 26/09/2024</td>
+                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'><p className='bg-bgComplete text-textComplete font-bold rounded-full w-fit px-2.5 py-1'>Đã thanh toán</p></td>
                 </tr>
             </tbody>
         </table>

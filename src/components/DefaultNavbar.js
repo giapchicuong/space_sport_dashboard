@@ -7,11 +7,11 @@ export default function DefaultNavbar({ title, linkTo, icon, isActive, iconChild
 
     return (
         <div className="w-full flex flex-col gap-2">
-            <div className={`w-full p-2.5 rounded-lg stroke-stroke opacity-90 ${isActive ? 'bg-primary text-white' : 'text-textColor'} delay-100 transition-all cursor-pointer hover:bg-primary hover:text-white`}>
-                <Link
-                    to={linkTo}
-                >
-                    <span className='flex items-center justify-between gap-2.5'>
+            <Link
+                to={linkTo}
+            >
+                <div className={`w-full p-2.5 rounded-lg stroke-stroke opacity-90 ${isActive ? 'bg-primary text-white' : 'text-textColor'} delay-100 transition-all cursor-pointer hover:bg-primary hover:text-white`}>
+                    <span className='flex items-center  gap-5'>
                         {
                             icon &&
                             icon
@@ -20,13 +20,13 @@ export default function DefaultNavbar({ title, linkTo, icon, isActive, iconChild
                             <p className='text-base font-normal text-center'>{title}</p>
                         </div>
 
-                        <RiArrowDropDownLine className='text-3xl' />
+                        {/* <RiArrowDropDownLine className='text-3xl' /> */}
 
                     </span>
 
-                </Link>
-            </div>
-
+                </div>
+            </Link>
+            {/* 
             {
                 iconChild &&
                 iconChild.map((item) =>
@@ -37,7 +37,7 @@ export default function DefaultNavbar({ title, linkTo, icon, isActive, iconChild
                         {item.title}
                     </Link>
                 )
-            }
-        </div>
+            } */}
+        </div >
     );
 }
