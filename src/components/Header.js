@@ -1,7 +1,6 @@
 import React from 'react'
 import DefaultSearch from './DefaultSearch'
-import CircleImage from './CircleImage'
-import { IoIosArrowDropdown, IoIosLogOut } from 'react-icons/io'
+import { IoIosLogOut } from 'react-icons/io'
 import DropdownAvatar from './DropdownAvatar'
 import { RiUserSettingsLine } from 'react-icons/ri'
 import { PiKeyBold } from 'react-icons/pi'
@@ -11,7 +10,7 @@ export default function Header() {
         <header className='w-full px-8 py-4 flex items-center justify-between'>
 
             <DefaultSearch
-                placeholder='Search'
+                placeholder='Tìm kiếm'
                 styles='w-[388px]'
             />
 
