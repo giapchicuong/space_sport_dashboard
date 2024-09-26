@@ -28,6 +28,7 @@ module.exports = {
         bgReject: '#ffcfca',
         textReject: '#EF3826',
         bgBlur: 'rgba(15, 15, 15, 0.90)',
+        bgProduct: '#F9F9F9',
       },
 
     },

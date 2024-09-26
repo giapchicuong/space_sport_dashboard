@@ -32,7 +32,7 @@ export default function DropdownAvatar({ title, data, handleClick, valueSelected
 
     return (
         <>
-            <div className='relative z-10' ref={dropdownRef}>
+            <div className='relative z-50' ref={dropdownRef}>
 
                 <button
                     type='button'

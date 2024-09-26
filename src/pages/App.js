@@ -6,10 +6,10 @@ import { HiOutlineArrowTrendingUp } from "react-icons/hi2";
 import { FiBox } from "react-icons/fi";
 import { FaChartLine } from "react-icons/fa";
 import { RxCountdownTimer } from "react-icons/rx";
-import { RiArrowDropDownLine } from "react-icons/ri";
 import AreaChart from "../components/AreaChart";
 import DefaultTable from "../components/DefaultTable";
 import ButtonCalendar from "../components/ButtonCalendar";
+import { overviewTable } from "../mockData";
 
 export default function App() {
 
@@ -182,7 +182,7 @@ export function DashboardPage() {
           <ButtonCalendar />
         </div>
 
-        <DefaultTable />
+        <DefaultTable thead={overviewTable.thead} tbody={overviewTable.tbody} />
 
       </div>
 

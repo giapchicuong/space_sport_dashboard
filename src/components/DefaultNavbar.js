@@ -11,7 +11,7 @@ export default function DefaultNavbar({ title, linkTo, icon, isActive, iconChild
                 to={linkTo}
             >
                 <div className={`w-full p-2.5 rounded-lg stroke-stroke opacity-90 ${isActive ? 'bg-primary text-white' : 'text-textColor'} delay-100 transition-all cursor-pointer hover:bg-primary hover:text-white`}>
-                    <span className='flex items-center  gap-5'>
+                    <span className='flex items-center gap-5'>
                         {
                             icon &&
                             icon

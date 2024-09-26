@@ -14,17 +14,17 @@ export default function SideBar() {
     const url = location.pathname.split('/')[2] ?? ''
 
     const menuItems = [
-        { title: 'Tổng quan', linkTo: '', icon: <AiOutlineDashboard className='text-black text-xl' /> },
-        { title: 'Báo cáo', linkTo: 'analyst', icon: <GrAnalytics className='text-black text-xl' /> },
-        { title: 'Đơn hàng', linkTo: 'orders', icon: <MdOutlineProductionQuantityLimits className='text-black text-xl' /> },
-        { title: 'Hóa đơn', linkTo: 'invoices', icon: <LiaFileInvoiceSolid className='text-black text-xl' /> },
-        { title: 'Kho hàng', linkTo: 'inventory', icon: <HiOutlineBuildingStorefront className='text-black text-xl' /> },
-        { title: 'Sản phẩm', linkTo: 'products', icon: <AiOutlineCodeSandbox className='text-black text-xl' /> },
-        { title: 'Danh mục', linkTo: 'categories', icon: <AiOutlineProduct className='text-black text-xl' /> },
-        { title: 'Người bán', linkTo: 'suppliers', icon: <LiaUsersSolid className='text-black text-xl' /> },
-        { title: 'Nhân viên', linkTo: 'users', icon: <HiOutlineUsers className='text-black text-xl' /> },
-        { title: 'Vai trò', linkTo: 'groups', icon: <FaRegUser className='text-black text-xl' /> },
-        { title: 'Nhóm quyền', linkTo: 'roles', icon: <AiOutlineApartment className='text-black text-xl' /> },
+        { title: 'Tổng quan', linkTo: '', icon: <AiOutlineDashboard className='text-xl' /> },
+        { title: 'Báo cáo', linkTo: 'analyst', icon: <GrAnalytics className='text-xl' /> },
+        { title: 'Đơn hàng', linkTo: 'orders', icon: <MdOutlineProductionQuantityLimits className='text-xl' /> },
+        { title: 'Hóa đơn', linkTo: 'invoices', icon: <LiaFileInvoiceSolid className='text-xl' /> },
+        { title: 'Kho hàng', linkTo: 'inventory', icon: <HiOutlineBuildingStorefront className='text-xl' /> },
+        { title: 'Sản phẩm', linkTo: 'products', icon: <AiOutlineCodeSandbox className='text-xl' /> },
+        { title: 'Danh mục', linkTo: 'categories', icon: <AiOutlineProduct className='text-xl' /> },
+        { title: 'Nhà cung cấp', linkTo: 'suppliers', icon: <LiaUsersSolid className='text-xl' /> },
+        { title: 'Nhân viên', linkTo: 'users', icon: <HiOutlineUsers className='text-xl' /> },
+        { title: 'Vai trò', linkTo: 'groups', icon: <FaRegUser className='text-xl' /> },
+        { title: 'Nhóm quyền', linkTo: 'roles', icon: <AiOutlineApartment className='text-xl' /> },
     ];
 
     return (

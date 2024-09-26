@@ -1,36 +1,74 @@
 import React from 'react';
+import { classifyOrderStatus, classsifyInvoiceType, classsifyPaymentMethod } from './Classify';
+import { Link } from 'react-router-dom';
 
-export default function DefaultTable() {
+export default function DefaultTable({ thead, tbody }) {
     return (
-        <table class="table-auto w-full h-fit text-textColor">
+        <table className="table-auto w-full h-fit text-textColor">
+
             <thead className='bg-inputPlaceholder'>
+
                 <tr>
-                    <th className='p-5 text-base font-bold text-start whitespace-nowrap rounded-l-xl'>Tên sản phẩm</th>
-                    <th className='p-5 text-base font-bold text-start whitespace-nowrap'>Nhân viên bán</th>
-                    <th className='p-5 text-base font-bold text-start whitespace-nowrap'>Phương thức thanh toán</th>
-                    <th className='p-5 text-base font-bold text-start whitespace-nowrap'>Tổng tiền</th>
-                    <th className='p-5 text-base font-bold text-start whitespace-nowrap'>Ngày bán</th>
-                    <th className='p-5 text-base font-bold text-start whitespace-nowrap rounded-r-xl'>Trạng thái</th>
+
+                    {thead && thead.map((item, index) =>
+
+                        <th key={index} className='p-5 text-base font-bold text-start whitespace-nowrap first:rounded-l-xl last:rounded-r-xl'>{item.title}</th>
+                    )}
                 </tr>
             </thead>
-            <tbody>
-                <tr className='border-b'>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>Nước mía</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>Giap Chi Cuong</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>Tiền mặt</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>45.000</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>15:30 26/09/2024</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'><p className='bg-bgComplete text-textComplete font-bold rounded-full w-fit px-2.5 py-1'>Đã thanh toán</p></td>
-                </tr>
 
-                <tr className='border-b'>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>Nước mía</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>Giap Chi Cuong</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>Tiền mặt</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>45.000</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>15:30 26/09/2024</td>
-                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'><p className='bg-bgComplete text-textComplete font-bold rounded-full w-fit px-2.5 py-1'>Đã thanh toán</p></td>
-                </tr>
+            <tbody>
+                {tbody && tbody.map((item, index) =>
+
+                    <tr className='border-b' key={index}>
+
+                        {item.data && item.data.map((cell, cellIndex) =>
+
+                            <React.Fragment key={cellIndex}>
+
+                                {cell.title &&
+                                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>
+
+                                        <Link to={`${item.linkTo ?? ''}`}>
+
+                                            {cell.title}
+                                        </Link>
+                                    </td>
+                                }
+
+                                {cell.paymentId &&
+                                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>
+
+                                        <Link to={`${item.linkTo ?? ''}`}>
+
+                                            {classsifyPaymentMethod(cell.paymentId)}
+                                        </Link>
+                                    </td>
+                                }
+
+                                {cell.invoiceId &&
+                                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>
+
+                                        <Link to={`${item.linkTo ?? ''}`}>
+
+                                            {classsifyInvoiceType(cell.invoiceId)}
+                                        </Link>
+                                    </td>
+                                }
+
+                                {cell.statusId &&
+                                    <td className='p-5 text-base font-normal text-start whitespace-nowrap'>
+
+                                        <Link to={`${item.linkTo ?? ''}`}>
+
+                                            {classifyOrderStatus(cell.statusId)}
+                                        </Link>
+                                    </td>
+                                }
+                            </React.Fragment>
+                        )}
+                    </tr>
+                )}
             </tbody>
         </table>
     );
