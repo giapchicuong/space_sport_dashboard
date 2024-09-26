@@ -1,6 +1,7 @@
 import React from 'react'
 import DefaultTable from '../../components/DefaultTable'
 import FilterLine from '../../components/FilterLine'
+import { orderTable } from '../../mockData'
 
 export default function OrdersPage() {
     return (
@@ -15,7 +16,7 @@ export default function OrdersPage() {
 
             <div className="w-full h-auto p-3 bg-white rounded-[14px] shadow-sm">
 
-                <DefaultTable />
+                <DefaultTable thead={orderTable.thead} tbody={orderTable.tbody} />
             </div>
 
         </main>

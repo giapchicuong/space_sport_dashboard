@@ -13,8 +13,14 @@ import SuppliersPage from "../pages/suppliersPage";
 import UsersPage from "../pages/usersPage";
 import GroupsPage from "../pages/groupsPage";
 import RolesPage from "../pages/rolesPage";
+import MenuPage from "../pages/menuPage/MenuPage";
+import InvoiceDetailsPage from "../pages/invoiceDetailsPage/InvoiceDetailsPage";
 
 const router = createBrowserRouter([
+    {
+        path: '/',
+        element: <MenuPage />
+    },
     {
         path: '/admin',
         element: <App />,
@@ -30,6 +36,10 @@ const router = createBrowserRouter([
             {
                 path: 'invoices',
                 element: <InvoicesPage />
+            },
+            {
+                path: 'invoices/:id',
+                element: <InvoiceDetailsPage />
             },
             {
                 path: 'inventory',
