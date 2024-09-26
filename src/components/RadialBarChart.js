@@ -37,7 +37,7 @@ export default function RadialBarChart() {
 
     return (
         <div>
-            <ReactApexChart options={valueChart.options} series={valueChart.series} type="radialBar" height={350} />
+            <ReactApexChart options={valueChart.options} series={valueChart.series} type="radialBar" />
         </div>
     )
 }

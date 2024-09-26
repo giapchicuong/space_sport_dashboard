@@ -48,7 +48,7 @@ export default function DonutChart() {
 
     return (
         <div>
-            <ReactApexChart options={valueChart.options} series={valueChart.series} type="donut" height={350} />
+            <ReactApexChart options={valueChart.options} series={valueChart.series} type="donut" />
         </div>
     )
 }
