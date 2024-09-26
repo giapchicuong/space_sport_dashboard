@@ -58,7 +58,7 @@ export default function RadarChart() {
 
     return (
         <div>
-            <ReactApexChart options={valueChart.options} series={valueChart.series} type="radar" height={350} />
+            <ReactApexChart options={valueChart.options} series={valueChart.series} type="radar" />
         </div>
     )
 }
