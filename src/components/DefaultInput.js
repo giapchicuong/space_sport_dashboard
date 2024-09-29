@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function DefaultInput({ title, name, id, placeholder, type, onChange }) {
+export default function DefaultInput({ title, name, id, placeholder, type, onChange, error }) {
     return (
         <div className="w-full flex flex-col gap-2.5">
 
@@ -11,8 +11,14 @@ export default function DefaultInput({ title, name, id, placeholder, type, onCha
                 name={name}
                 id={id}
                 placeholder={placeholder}
-                className='w-full p-4 bg-inputPlaceholder border rounded-lg stroke-stroke'
-                onChange={onChange} />
+                className={`w-full p-4 bg-inputPlaceholder border rounded-lg  ${error && 'border border-textReject'}`}
+                onChange={onChange}
+            />
+
+            {
+                error &&
+                <p className='text-lg font-normal text-textReject'>{error}</p>
+            }
         </div>
     );
 }

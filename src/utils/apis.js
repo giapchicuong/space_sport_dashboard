@@ -1,25 +1,29 @@
 import axios from "axios";
 
-export const URL_SERVER = ''
+export const URL_SERVER = 'http://localhost:8080/api/v1'
 
-const instaince = axios.create({
+const instance = axios.create({
     baseURL: URL_SERVER
 })
 
-instaince.interceptors.request.use(config => {
+instance.interceptors.request.use(config => {
+    // const token = getLocalStorage('token')
 
+    config.headers["Authorization"] = `Bearer`
+
+    return config
 }, (err) => {
     return Promise.reject(err)
 })
 
-instaince.interceptors.response.use(res => {
+instance.interceptors.response.use(res => {
     return res
 },
     async err => {
-        if (statusError === 403) {
-            clearLocalStorage()
-            window.location.href = '/auth'
-        }
+        // if (statusError === 403) {
+        //     // clearLocalStorage()
+        //     window.location.href = '/auth'
+        // }
 
         return Promise.reject(err)
     }
@@ -27,7 +31,7 @@ instaince.interceptors.response.use(res => {
 
 export const get = async (url) => {
     try {
-        const response = await instaince.get(url)
+        const response = await instance.get(url)
 
         return response
     } catch (err) {
@@ -37,7 +41,7 @@ export const get = async (url) => {
 
 export const post = async (url, data) => {
     try {
-        const response = await instaince.post(url, data)
+        const response = await instance.post(url, data)
 
         return response
     } catch (err) {

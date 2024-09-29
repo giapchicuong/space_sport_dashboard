@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, Outlet, useLocation } from 'react-router-dom'
 import authBackground from '../../assets/images/authBackground.png'
 import DefaultInput from '../../components/DefaultInput'
 import CheckboxInput from '../../components/CheckboxInput'
 import DefaultButton from '../../components/DefaultButton'
-
+import { useDispatch, useSelector } from 'react-redux'
+import { useFormik } from 'formik'
+import { login } from '../../redux/actions/auth.action'
+import * as Yup from 'yup'
+import { INPUT_REQUIRED } from '../../utils/error'
 export default function AuthPage() {
     const { pathname } = useLocation()
     return (
@@ -31,6 +35,32 @@ export default function AuthPage() {
 
 
 export function LoginPage() {
+
+    const dispatch = useDispatch()
+
+    const [showError, setShowError] = useState(null)
+
+    const { errorLogin } = useSelector(state => state.auth)
+
+    const formik = useFormik({
+        initialValues: {
+            email: '',
+            password: ''
+        },
+        validationSchema: Yup.object({
+            email: Yup.string().required(INPUT_REQUIRED),
+            password: Yup.string().required(INPUT_REQUIRED)
+        }),
+
+        onSubmit: values => {
+            dispatch(login(values))
+        }
+    })
+
+    useEffect(() => {
+        setShowError(!!errorLogin)
+    }, [errorLogin])
+
     return (
         <section className='w-full flex flex-col gap-5 '>
             <h1 className='text-[32px] text-center font-bold'>Login to Account</h1>
@@ -45,6 +75,14 @@ export function LoginPage() {
                     name='email'
                     title='Email address:'
                     placeholder='Enter your email address'
+                    values={formik.values.email}
+                    onChange={(e) => {
+                        formik.handleChange(e)
+                        setShowError(false)
+                    }}
+                    error={
+                        (formik.errors.email) && formik.errors.email
+                    }
                 />
 
                 <DefaultInput
@@ -53,6 +91,14 @@ export function LoginPage() {
                     name='password'
                     title='Password:'
                     placeholder='Enter your password'
+                    values={formik.values.password}
+                    onChange={(e) => {
+                        formik.handleChange(e)
+                        setShowError(false)
+                    }}
+                    error={
+                        (formik.errors.password) && formik.errors.password
+                    }
                 />
 
                 <div className="w-full flex items-center justify-between">
@@ -72,6 +118,7 @@ export function LoginPage() {
                 <Link to='' className='w-full'>
                     <DefaultButton
                         title='Sign In'
+                        onClick={formik.handleSubmit}
                     />
                 </Link>
 

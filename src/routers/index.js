@@ -15,15 +15,22 @@ import GroupsPage from "../pages/groupsPage";
 import RolesPage from "../pages/rolesPage";
 import MenuPage from "../pages/menuPage/MenuPage";
 import InvoiceDetailsPage from "../pages/invoiceDetailsPage/InvoiceDetailsPage";
+import ProtectRouter from "./ProtectRouter";
 
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <MenuPage />
+        element:
+            <ProtectRouter>
+                <MenuPage />
+            </ProtectRouter>
     },
     {
         path: '/admin',
-        element: <App />,
+        element:
+            <ProtectRouter>
+                <App />
+            </ProtectRouter>,
         children: [
             {
                 path: 'analyst',
